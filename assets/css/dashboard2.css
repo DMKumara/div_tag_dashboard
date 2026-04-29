@@ -1,0 +1,159 @@
+/* Dashboard 2: Kanban Project Management Layout Specifics */
+.kanban-board {
+  display: flex;
+  gap: var(--space-6);
+  height: calc(100vh - 70px - var(--space-6) * 2); /* Full height minus topbar and padding */
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  align-items: flex-start;
+}
+
+.kanban-column {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-width: 320px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.kanban-header {
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.kanban-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.task-count {
+  background: var(--color-surface-light);
+  color: var(--color-text-main);
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.kanban-cards {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.kanban-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  cursor: grab;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.kanban-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.kanban-card:active {
+  cursor: grabbing;
+}
+
+.card-labels {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.label.high { background: rgba(239, 68, 68, 0.1); color: var(--color-danger); }
+.label.medium { background: rgba(245, 158, 11, 0.1); color: var(--color-warning); }
+.label.low { background: rgba(16, 185, 129, 0.1); color: var(--color-success); }
+.label.feature { background: rgba(59, 130, 246, 0.1); color: var(--color-primary); }
+
+.card-title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+}
+
+.card-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-text svg {
+  width: 14px;
+  height: 14px;
+}
+
+.card-assignees {
+  display: flex;
+  align-items: center;
+}
+
+.assignee-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-background);
+  background-size: cover;
+  margin-left: -8px;
+}
+
+.assignee-avatar:first-child {
+  margin-left: 0;
+}
+
+.add-card-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  padding: var(--space-3);
+  margin: 0 var(--space-4) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.add-card-btn:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-main);
+}

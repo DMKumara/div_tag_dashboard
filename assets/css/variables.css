@@ -1,0 +1,58 @@
+/* Google Fonts: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Premium Dark Theme */
+  --color-background: #0f172a;      /* Slate 900 */
+  --color-surface: #1e293b;         /* Slate 800 */
+  --color-surface-hover: #334155;   /* Slate 700 */
+  --color-surface-light: #475569;   /* Slate 600 */
+  
+  --color-primary: #3b82f6;         /* Blue 500 */
+  --color-primary-hover: #2563eb;   /* Blue 600 */
+  --color-primary-glow: rgba(59, 130, 246, 0.4);
+  
+  --color-secondary: #8b5cf6;       /* Violet 500 */
+  --color-success: #10b981;         /* Emerald 500 */
+  --color-warning: #f59e0b;         /* Amber 500 */
+  --color-danger: #ef4444;          /* Red 500 */
+  
+  --color-text-main: #f8fafc;       /* Slate 50 */
+  --color-text-muted: #94a3b8;      /* Slate 400 */
+  --color-border: #334155;          /* Slate 700 */
+
+  /* Typography */
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+
+  /* Borders & Shadows */
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px var(--color-primary-glow);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+}
