@@ -1,0 +1,89 @@
+====================================================================
+               PROJECT MAINTENANCE NOTE & DEVELOPER GUIDE
+====================================================================
+Project Name : Div Tag Dashboards (Task 1, 2, 3)
+Last Updated : April 29, 2026
+Developer    : Dammika Madushan Kumara
+Status       : V1.0 (Initial Layouts Completed)
+====================================================================
+
+Hello! 👋 Welcome to the maintenance guide for the Div Tag Dashboards 
+project. This document is written to help any developer (including 
+future you!) easily understand, maintain, and scale this codebase. 
+
+The code has been specifically "humanized"—meaning it prioritizes 
+readability, logical organization, and standard naming conventions 
+over complex shortcuts.
+
+--------------------------------------------------------------------
+1. PROJECT ARCHITECTURE (Where to find things)
+--------------------------------------------------------------------
+We use a clean, separated folder structure to keep HTML and assets 
+organized.
+
+📁 /assets
+   📁 /css
+      📄 variables.css    -> Central hub for colors, fonts, and spacing. 
+                             If you want to change the primary color 
+                             or theme, do it here!
+      📄 reset.css        -> Normalizes default browser styles.
+      📄 layout.css       -> Shared UI parts (Sidebar, Top Navigation).
+      📄 dashboard1.css   -> Specific styles for Task 1 (Analytics).
+      📄 dashboard2.css   -> Specific styles for Task 2 (Kanban).
+      📄 dashboard3.css   -> Specific styles for Task 3 (Settings).
+   📁 /images             -> Store all local images and SVGs here.
+   📁 /js
+      📄 main.js          -> Global JavaScript (Sidebar toggle, active links).
+
+📄 index.html             -> The main landing page / Hub.
+📄 task1.html             -> Analytics Dashboard.
+📄 task2.html             -> Project Management Kanban Board.
+📄 task3.html             -> User Profile & Settings.
+
+--------------------------------------------------------------------
+2. STYLING RULES & CONVENTIONS
+--------------------------------------------------------------------
+• No inline styles: Avoid writing `<div style="...">`. Always use classes.
+• CSS Variables: Always use the variables defined in `variables.css` 
+  for colors and spacing (e.g., `var(--color-primary)`). This makes 
+  creating a "Light Mode" later incredibly easy.
+• Layouts: We strictly use CSS Flexbox (`display: flex`) and 
+  CSS Grid (`display: grid`). Outdated techniques like `float` 
+  are not used here.
+
+--------------------------------------------------------------------
+3. HOW TO ADD A NEW DASHBOARD (e.g., Task 4)
+--------------------------------------------------------------------
+If you need to add a 4th dashboard in the future, follow these steps:
+
+1. Duplicate `task1.html` and rename it to `task4.html`.
+2. Clear the contents inside the `<main class="main-content">` tag, 
+   but keep the sidebar and topbar.
+3. Create a new file in `assets/css/` called `dashboard4.css`.
+4. Link `dashboard4.css` in the `<head>` of your new `task4.html` file.
+5. Add a link to `task4.html` in the sidebar menu of all other HTML files.
+6. Add a new card on the `index.html` hub page pointing to `task4.html`.
+
+--------------------------------------------------------------------
+4. CURRENT COMPLETED TASKS
+--------------------------------------------------------------------
+[x] Setup core project architecture and CSS reset.
+[x] Define modern, dark-theme UI variables (colors, fonts).
+[x] Build Central Hub (index.html).
+[x] Build Analytics Layout with CSS-only charts (Task 1).
+[x] Build Kanban Board Layout with horizontal scroll (Task 2).
+[x] Build Settings Layout with custom form toggles (Task 3).
+
+--------------------------------------------------------------------
+5. FUTURE IMPROVEMENTS (TODO LIST)
+--------------------------------------------------------------------
+[ ] Add mobile responsiveness to the Sidebar (currently it hides on 
+    mobile, needs a hamburger menu toggle).
+[ ] Integrate a JavaScript Chart library (like Chart.js) for Task 1 
+    if actual data needs to be rendered.
+[ ] Add drag-and-drop JavaScript functionality for the Task 2 Kanban board.
+[ ] Create a Light Theme toggle in `variables.css`.
+
+--------------------------------------------------------------------
+"Code is read much more often than it is written. Keep it clean!"
+====================================================================
